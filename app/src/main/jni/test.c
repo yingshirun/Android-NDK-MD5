@@ -28,7 +28,7 @@ JNICALL Java_com_shirun_jnitest33_TestJni_getJniString
     MD5Final(dest, &context);
     (*env)->ReleaseStringUTFChars(env, strText, str);
     int i = 0;
-    char szMd5[32] = {0};
+    char szMd5[33] = {0};
     for (i = 0; i < 16; i++) {
         sprintf(szMd5, "%s%02x", szMd5, dest[i]);
     }
